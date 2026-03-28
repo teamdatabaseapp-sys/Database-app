@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,8 +113,11 @@
     }
     .hero-brand-lockup { margin-bottom: 12px; }
     .hero-main-logo {
-      max-width: 440px; width: 100%; height: auto; display: inline-block;
-      filter: drop-shadow(0 8px 40px rgba(13,148,136,0.28));
+      max-width: 560px; width: 100%; height: auto; display: inline-block;
+      filter: brightness(0) invert(1) drop-shadow(0 4px 32px rgba(0,0,0,0.25));
+    }
+    @media (max-width: 768px) {
+      .hero-main-logo { max-width: 340px; }
     }
     .hero-phone-wrap { margin-bottom: 22px; }
     .hero-cta-stack {
@@ -873,6 +878,7 @@
   </div>
 </nav>
 
+
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero">
   <div class="hero-noise"></div>
@@ -880,7 +886,7 @@
 
     <!-- 1 · Logo -->
     <div class="hero-brand-lockup">
-      <img src="./logo.png" alt="Database" class="hero-main-logo" />
+      <img src="/logo.png" alt="Database" class="hero-main-logo" />
     </div>
 
     <!-- 2 · iPhone Mockup -->
@@ -889,7 +895,7 @@
         <div class="phone-frame">
           <div class="phone-screen" style="background:#0a0f1a;">
             <img
-              src="./dashboard-clean-v2.jpg"
+              src="/dashboard-clean-v2.jpg"
               alt="App Dashboard"
               style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
             />
@@ -946,7 +952,7 @@
         <div class="phone-wrap">
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;">
             <img
-              src="./clients-screenshot-v2.jpg"
+              src="/clients-screenshot-v2.jpg"
               alt="Clients Screen"
               style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
             />
@@ -979,7 +985,7 @@
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;">
             <img
-              src="./appointments-screenshot-v1.jpg"
+              src="/appointments-screenshot-v1.jpg"
               alt="Appointments Screen"
               style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
             />
@@ -1027,7 +1033,7 @@
         <div class="phone-wrap">
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;">
             <img
-              src="./analytics-screenshot-v1.jpg"
+              src="/analytics-screenshot-v1.jpg"
               alt="Analytics Screen"
               style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
             />
@@ -1060,7 +1066,7 @@
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;">
             <img
-              src="./promotions-screenshot-v1.jpg"
+              src="/promotions-screenshot-v1.jpg"
               alt="Promotions Screen"
               style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
             />
@@ -1268,7 +1274,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="./logo.png" alt="Database" style="height:24px;width:auto;display:block;" />
+          <img src="/logo-cropped.png" alt="Database" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1);max-width:320px;" />
         </div>
         <div class="footer-tagline">The all-in-one platform for service businesses. Manage clients, bookings, marketing, and analytics from a single beautiful app.</div>
         <div class="footer-address">
@@ -1343,6 +1349,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <script>
   // Nav scroll
