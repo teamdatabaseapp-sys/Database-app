@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClientFlow — Built for Barbershops, Salons & Spas</title>
+  <meta name="description" content="ClientFlow is the all-in-one client management platform for barbershops, salons, nail techs, and spas. Appointments, loyalty, email marketing, gift cards, and more." />
+  <meta property="og:title" content="ClientFlow — Built for Barbershops, Salons & Spas" />
+  <meta property="og:description" content="The all-in-one client management platform made for modern service businesses." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0b;
+      --bg2: #111113;
+      --bg3: #1a1a1e;
+      --border: rgba(255,255,255,0.07);
+      --gold: #d4a843;
+      --gold-light: #f0c76a;
+      --gold-dim: rgba(212,168,67,0.12);
+      --text: #f0ede8;
+      --text-muted: #8a8682;
+      --text-dim: #504e4b;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,10,11,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--gold);
+      color: #0a0a0b;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: -0.2px;
+    }
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .nav-mobile-cta { display: none; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 24px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(212,168,67,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(212,168,67,0.25);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 84px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1.0;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, #e8b84b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(17px, 2.2vw, 20px);
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.6;
+      margin-bottom: 44px;
+      font-weight: 400;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #0a0a0b;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      letter-spacing: -0.3px;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(212,168,67,0.35);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+    .hero-trust {
+      margin-top: 64px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--text-dim);
+      font-size: 13px;
+      font-weight: 500;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-trust-divider {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+    }
+    .hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stars { color: var(--gold); font-size: 14px; letter-spacing: 1px; }
+
+    /* ─── LOGO STRIP ─── */
+    .logo-strip {
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+      text-align: center;
+    }
+    .logo-strip-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+    .logo-strip-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .logo-strip-logos span {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: -0.3px;
+      opacity: 0.6;
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    section { padding: 100px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(30px, 4.5vw, 50px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    /* ─── FEATURES GRID ─── */
+    .features-header { margin-bottom: 64px; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .feature-card {
+      background: var(--bg2);
+      padding: 36px 32px;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .feature-card:hover { background: var(--bg3); }
+    .feature-card:nth-child(1) { border-radius: var(--radius) 0 0 0; }
+    .feature-card:nth-child(3) { border-radius: 0 var(--radius) 0 0; }
+    .feature-card:nth-child(4) { border-radius: 0 0 0 var(--radius); }
+    .feature-card:nth-child(6) { border-radius: 0 0 var(--radius) 0; }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold-dim);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.4px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--gold);
+      background: var(--gold-dim);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ─── METRICS ─── */
+    .metrics-section { background: var(--bg2); }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .metric {
+      background: var(--bg);
+      padding: 44px 32px;
+      text-align: center;
+    }
+    .metric-value {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .how-steps { display: flex; flex-direction: column; gap: 0; }
+    .how-step {
+      display: flex;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .how-step:last-child { border-bottom: none; }
+    .how-step:hover .step-title { color: var(--gold-light); }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(212,168,67,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+      transition: color 0.2s;
+    }
+    .step-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .how-visual {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .how-visual::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(212,168,67,0.08) 0%, transparent 70%);
+    }
+    .mock-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .mock-title { font-size: 13px; font-weight: 700; }
+    .mock-badge {
+      background: rgba(34,197,94,0.12);
+      color: #4ade80;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+    .mock-client {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg3);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+    }
+    .mock-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .mock-client-info { flex: 1; }
+    .mock-name { font-size: 13px; font-weight: 600; }
+    .mock-detail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .mock-stat {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      text-align: right;
+    }
+    .mock-row {
+      display: flex;
+      gap: 10px;
+    }
+    .mock-pill {
+      flex: 1;
+      background: var(--bg3);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 12px;
+    }
+    .mock-pill-val {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 2px;
+    }
+    .mock-pill-label { color: var(--text-muted); font-size: 11px; }
+    .mock-appt {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg3);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+    }
+    .mock-appt-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .mock-appt-service { font-size: 13px; font-weight: 600; flex: 1; }
+    .mock-appt-time { font-size: 12px; color: var(--text-muted); }
+
+    /* ─── COMPARISON TABLE ─── */
+    .comparison-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .comparison-header { text-align: center; margin-bottom: 56px; }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .comparison-table th {
+      padding: 20px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      text-align: left;
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table th:first-child { color: var(--text-muted); font-weight: 500; }
+    .comparison-table th.highlight { color: var(--gold); }
+    .comparison-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table td.highlight { background: rgba(212,168,67,0.04); }
+    .comparison-table td:first-child { color: var(--text); font-weight: 500; }
+    .check { color: var(--gold); font-weight: 700; font-size: 16px; }
+    .cross { color: var(--text-dim); font-size: 16px; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-section { background: var(--bg2); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 56px;
+    }
+    .testimonial {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .testimonial:hover { border-color: rgba(212,168,67,0.2); transform: translateY(-3px); }
+    .testimonial-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .testimonial-name { font-size: 14px; font-weight: 700; }
+    .testimonial-biz { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+
+    /* ─── FAQ ─── */
+    .faq-section { }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      padding: 24px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      letter-spacing: -0.3px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold-light); }
+    .faq-chevron {
+      font-size: 18px;
+      color: var(--text-dim);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(45deg); color: var(--gold); }
+    .faq-answer {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding-bottom: 0;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 24px; }
+
+    /* ─── PRICING ─── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 56px;
+    }
+    .pricing-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .pricing-card:hover { border-color: rgba(212,168,67,0.2); transform: translateY(-3px); }
+    .pricing-card.featured {
+      border-color: rgba(212,168,67,0.35);
+      background: linear-gradient(135deg, rgba(212,168,67,0.06) 0%, var(--bg2) 100%);
+    }
+    .pricing-popular {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #0a0a0b;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .pricing-tier {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .pricing-price {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-price sup {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0;
+      vertical-align: top;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    .pricing-period { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+    .pricing-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; line-height: 1.5; }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-bottom: 28px;
+      transition: all 0.2s;
+    }
+    .pricing-cta-primary {
+      background: var(--gold);
+      color: #0a0a0b;
+    }
+    .pricing-cta-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(212,168,67,0.3);
+    }
+    .pricing-cta-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .pricing-cta-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 13px;
+      min-width: 16px;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* ─── CTA BANNER ─── */
+    .cta-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-inner {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .cta-inner h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      letter-spacing: -2.5px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .cta-inner h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-inner p { font-size: 17px; color: var(--text-muted); margin-bottom: 40px; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .app-badges { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+    .app-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .app-badge:hover { border-color: rgba(255,255,255,0.2); background: #242428; }
+    .app-badge-icon { font-size: 22px; }
+    .app-badge-text { display: flex; flex-direction: column; }
+    .app-badge-sub { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .app-badge-name { font-size: 14px; font-weight: 700; letter-spacing: -0.3px; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 60px 24px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .footer-brand .footer-logo {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .footer-brand .footer-logo span { color: var(--gold); }
+    .footer-tagline { font-size: 13px; color: var(--text-dim); max-width: 220px; line-height: 1.5; }
+    .footer-links-group { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links-group h4 { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
+    .footer-links-group a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links-group a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-mobile-cta {
+        display: block;
+        background: var(--gold);
+        color: #0a0a0b;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 9px 18px;
+        border-radius: 50px;
+        text-decoration: none;
+      }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-grid { grid-template-columns: 1fr; gap: 40px; }
+      .how-visual { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+      .comparison-table { font-size: 13px; }
+      .comparison-table th, .comparison-table td { padding: 12px 14px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 72px 20px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { padding: 120px 20px 80px; }
+      .hero h1 { letter-spacing: -2px; }
+      .hero-trust-divider { display: none; }
+      .logo-strip-logos { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a href="/" class="nav-logo">Client<span>Flow</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#pricing" class="nav-cta">Start Free Trial</a>
+    <a href="#pricing" class="nav-mobile-cta">Get Started</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Now available on iOS &amp; App Store</div>
+    <h1>Your shop.<br /><em>Fully managed.</em></h1>
+    <p class="hero-sub">ClientFlow is the all-in-one platform built for barbershops, salons, nail techs &amp; spas. Book clients, send campaigns, and grow retention — all in one app.</p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn-primary">Start Free Trial — 14 Days Free</a>
+      <a href="#how" class="btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 5.5L10 8l-3.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        See how it works
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-rating">
+        <span class="stars">★★★★★</span>
+        <span>4.9 on App Store</span>
+      </div>
+      <div class="hero-trust-divider"></div>
+      <span>Trusted by 2,000+ service businesses</span>
+      <div class="hero-trust-divider"></div>
+      <span>No contracts, cancel anytime</span>
+      <div class="hero-trust-divider"></div>
+      <span>Setup in under 5 minutes</span>
+    </div>
+  </section>
+
+  <!-- LOGO STRIP -->
+  <div class="logo-strip">
+    <div class="logo-strip-label">Trusted by shops across the country</div>
+    <div class="logo-strip-logos">
+      <span>King's Cuts · Atlanta</span>
+      <span>Luxe Salon · Miami</span>
+      <span>Bliss Nail &amp; Spa · Houston</span>
+      <span>The Cut Lab · Chicago</span>
+      <span>Studio 305 · LA</span>
+      <span>Prestige Barbershop · NYC</span>
+    </div>
+  </div>
+
+  <!-- METRICS -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="metric-value">2K+</div>
+          <div class="metric-label">Active Businesses</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">1.2M</div>
+          <div class="metric-label">Appointments Booked</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">98%</div>
+          <div class="metric-label">Retention Rate</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">4.9★</div>
+          <div class="metric-label">App Store Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-label">Everything you need</div>
+        <h2 class="section-title">One app.<br />Every tool.</h2>
+        <p class="section-sub">Stop juggling five different apps. ClientFlow brings everything your service business needs into one beautiful platform.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Smart Appointments</h3>
+          <p>Book, manage and track appointments with a clean calendar. Set staff schedules, handle rescheduling, and send automatic reminders.</p>
+          <span class="feature-tag">Core</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Client Management</h3>
+          <p>A full CRM built for service businesses. Track visit history, notes, spend, and lifetime value for every client automatically.</p>
+          <span class="feature-tag">Core</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📧</div>
+          <h3>Email Marketing</h3>
+          <p>Send beautiful bulk campaigns or set up automated drip sequences that bring lapsed clients back through the door.</p>
+          <span class="feature-tag">Growth</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎁</div>
+          <h3>Gift Cards</h3>
+          <p>Issue and redeem digital gift cards at checkout. Tracked automatically — by value or by service — with full transaction history.</p>
+          <span class="feature-tag">Revenue</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Loyalty Programs</h3>
+          <p>Reward your regulars automatically. Clients earn points with every visit and redeem them toward future services.</p>
+          <span class="feature-tag">Retention</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3>Memberships &amp; Promos</h3>
+          <p>Create recurring membership plans and promotion campaigns. Drive predictable revenue and keep chairs full year-round.</p>
+          <span class="feature-tag">Revenue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="how-grid">
+        <div>
+          <div class="section-label">How it works</div>
+          <h2 class="section-title" style="margin-bottom: 40px;">Up and running<br />in minutes</h2>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="step-num">1</div>
+              <div>
+                <div class="step-title">Set up your business profile</div>
+                <p class="step-desc">Add your shop details, services, and staff. Customize your booking page and hours — takes less than 5 minutes.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-num">2</div>
+              <div>
+                <div class="step-title">Import your client list</div>
+                <p class="step-desc">Bring your existing clients in with a simple CSV import. Every client gets a full profile with visit history automatically.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-num">3</div>
+              <div>
+                <div class="step-title">Book appointments &amp; get paid</div>
+                <p class="step-desc">Start booking same-day. Share your booking link with clients for self-scheduling, or add appointments yourself.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-num">4</div>
+              <div>
+                <div class="step-title">Automate your marketing</div>
+                <p class="step-desc">Set up drip campaigns and loyalty programs once. ClientFlow handles the follow-up so you never lose a client to silence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="how-visual">
+          <div class="mock-header">
+            <span class="mock-title">Today's Dashboard</span>
+            <span class="mock-badge">● Live</span>
+          </div>
+          <div class="mock-row">
+            <div class="mock-pill">
+              <div class="mock-pill-val" style="color: var(--gold);">12</div>
+              <div class="mock-pill-label">Appointments</div>
+            </div>
+            <div class="mock-pill">
+              <div class="mock-pill-val">$1,840</div>
+              <div class="mock-pill-label">Revenue today</div>
+            </div>
+          </div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin: 4px 0 8px;">Upcoming</div>
+          <div class="mock-appt">
+            <div class="mock-appt-dot"></div>
+            <div class="mock-appt-service">Fade + Line-up</div>
+            <div class="mock-appt-time">10:00 AM · Marcus</div>
+          </div>
+          <div class="mock-appt">
+            <div class="mock-appt-dot" style="background: #818cf8;"></div>
+            <div class="mock-appt-service">Full Color + Blowout</div>
+            <div class="mock-appt-time">10:30 AM · Tanya</div>
+          </div>
+          <div class="mock-appt">
+            <div class="mock-appt-dot" style="background: #34d399;"></div>
+            <div class="mock-appt-service">Manicure + Gel Polish</div>
+            <div class="mock-appt-time">11:00 AM · Jess</div>
+          </div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin: 4px 0 8px;">Top Clients</div>
+          <div class="mock-client">
+            <div class="mock-avatar" style="background: rgba(212,168,67,0.15); color: var(--gold);">JW</div>
+            <div class="mock-client-info">
+              <div class="mock-name">Jordan W.</div>
+              <div class="mock-detail">32 visits · Member since Jan 2024</div>
+            </div>
+            <div class="mock-stat">★ VIP</div>
+          </div>
+          <div class="mock-client">
+            <div class="mock-avatar" style="background: rgba(129,140,248,0.15); color: #818cf8;">AL</div>
+            <div class="mock-client-info">
+              <div class="mock-name">Ashley L.</div>
+              <div class="mock-detail">18 visits · Loyalty member</div>
+            </div>
+            <div class="mock-stat">480 pts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="comparison-header">
+        <div class="section-label" style="text-align:center">Why ClientFlow</div>
+        <h2 class="section-title" style="text-align:center">See how we compare</h2>
+      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">ClientFlow</th>
+            <th>Generic CRM</th>
+            <th>Old Scheduling Apps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Built for service businesses</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Appointment scheduling</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Email marketing + drip campaigns</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Loyalty programs</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Digital gift cards</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Client lifetime value tracking</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Mobile-first iOS app</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td>Partial</td>
+          </tr>
+          <tr>
+            <td>Setup time</td>
+            <td class="highlight" style="color: var(--gold); font-weight: 600;">Under 5 min</td>
+            <td>Days</td>
+            <td>Hours</td>
+          </tr>
+          <tr>
+            <td>Starting price</td>
+            <td class="highlight" style="color: var(--gold); font-weight: 600;">$29/mo</td>
+            <td>$80+/mo</td>
+            <td>$50+/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-label">Real businesses, real results</div>
+      <h2 class="section-title">They made the switch</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We went from manually texting clients to a full drip sequence. Our retention jumped 40% in the first two months. Can't imagine running the shop without it."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(212,168,67,0.15); color: var(--gold);">DK</div>
+            <div>
+              <div class="testimonial-name">Darius King</div>
+              <div class="testimonial-biz">King's Cuts Barbershop, Atlanta</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The gift card feature alone paid for itself on our holiday promo. We sold $4,200 in gift cards in one weekend. My old software couldn't even do that."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(129,140,248,0.15); color: #818cf8;">MR</div>
+            <div>
+              <div class="testimonial-name">Maya Rodriguez</div>
+              <div class="testimonial-biz">Luxe Salon, Miami</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Switched from three apps to just ClientFlow. Appointments, email marketing, loyalty — all in one place. My staff learned it in a day."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(52,211,153,0.15); color: #34d399;">TN</div>
+            <div>
+              <div class="testimonial-name">Tamika Nguyen</div>
+              <div class="testimonial-biz">Bliss Nail &amp; Spa, Houston</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-label" style="text-align:center">Simple pricing</div>
+      <h2 class="section-title" style="text-align:center">Grow at your own pace</h2>
+      <p class="section-sub" style="text-align:center; margin: 12px auto 0">No hidden fees. No contracts. Cancel or change plans anytime.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price"><sup>$</sup>29</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-desc">Perfect for solo operators just getting started with digital client management.</div>
+          <a href="#" class="pricing-cta pricing-cta-ghost">Start Free Trial</a>
+          <ul class="pricing-features">
+            <li>Up to 100 clients</li>
+            <li>Appointment scheduling</li>
+            <li>Basic client profiles</li>
+            <li>Online booking page</li>
+            <li>Email reminders</li>
+          </ul>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-tier">Growth</div>
+          <div class="pricing-price"><sup>$</sup>79</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-desc">The full ClientFlow experience for growing shops with a team and loyal clientele.</div>
+          <a href="#" class="pricing-cta pricing-cta-primary">Start Free Trial</a>
+          <ul class="pricing-features">
+            <li>Unlimited clients</li>
+            <li>Up to 5 staff members</li>
+            <li>Email marketing + drip campaigns</li>
+            <li>Gift cards &amp; loyalty programs</li>
+            <li>Memberships &amp; promotions</li>
+            <li>Advanced analytics</li>
+            <li>Multi-store support</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price" style="font-size: 38px; letter-spacing: -2px;">Custom</div>
+          <div class="pricing-period">contact for pricing</div>
+          <div class="pricing-desc">For multi-location chains and franchises that need power, control, and dedicated support.</div>
+          <a href="mailto:hello@clientflow.app" class="pricing-cta pricing-cta-ghost">Contact Sales</a>
+          <ul class="pricing-features">
+            <li>Unlimited locations &amp; staff</li>
+            <li>Custom onboarding &amp; training</li>
+            <li>API access</li>
+            <li>Dedicated account manager</li>
+            <li>SLA &amp; priority support</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pricing-note">All plans include a 14-day free trial. No credit card required.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section" style="background: var(--bg2); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="faq-header">
+        <div class="section-label" style="text-align:center">FAQ</div>
+        <h2 class="section-title" style="text-align:center">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does setup take?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">Most shops are fully set up and booking appointments within 5–10 minutes. You add your services, set your hours, and share your booking link. That's it. We also have a simple CSV import for your existing client list.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I import my existing client data?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">Yes. ClientFlow supports CSV import so you can bring in your full client list — names, phone numbers, emails, and visit notes. Everything migrates cleanly and each client gets their own profile automatically.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need a credit card to start the trial?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">No. You get 14 days completely free without entering a credit card. At the end of your trial you can choose a plan — or not. No pressure, no auto-charges.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What happens if I go over my client limit on Starter?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">We'll notify you when you're approaching your limit and make it easy to upgrade to the Growth plan with one tap. Your data is never locked or deleted — upgrading is instant.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I cancel anytime?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">Absolutely. There are no contracts or cancellation fees. Cancel from your account settings in seconds. You keep access until the end of your billing period, and you can export all your data at any time.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is there a mobile app?
+            <span class="faq-chevron">+</span>
+          </button>
+          <div class="faq-answer">Yes — ClientFlow is available on the App Store for iPhone. It's designed mobile-first so you can manage your shop, book clients, and send campaigns all from your phone. An Android version is coming soon.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Ready to fill<br /><em>every chair?</em></h2>
+        <p>Join thousands of service businesses using ClientFlow to book more, retain more, and earn more — with zero tech headaches.</p>
+        <div class="cta-actions">
+          <a href="#pricing" class="btn-primary">Start 14-Day Free Trial</a>
+          <a href="mailto:hello@clientflow.app" class="btn-ghost">Talk to sales</a>
+        </div>
+        <div class="app-badges">
+          <a href="#" class="app-badge">
+            <span class="app-badge-icon">🍎</span>
+            <div class="app-badge-text">
+              <span class="app-badge-sub">Download on the</span>
+              <span class="app-badge-name">App Store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Client<span>Flow</span></div>
+        <p class="footer-tagline">The client management platform built for modern service businesses.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Business</h4>
+        <a href="#">Barbershops</a>
+        <a href="#">Salons</a>
+        <a href="#">Nail Studios</a>
+        <a href="#">Spas</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <a href="mailto:hello@clientflow.app">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ClientFlow. All rights reserved.</span>
+      <span>Made for the people who keep us looking good.</span>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Nav shadow on scroll
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 20 ? '0 4px 40px rgba(0,0,0,0.5)' : 'none';
+    });
+
+    // Animate elements on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .metric, .testimonial, .pricing-card, .how-step, .faq-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
