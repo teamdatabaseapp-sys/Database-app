@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Database",
+    "slug": "vibecode",
+    "scheme": "database",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-asset",
+      "expo-video",
+      "expo-web-browser",
+      "react-native-edge-to-edge"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
