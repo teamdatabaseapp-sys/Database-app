@@ -26,7 +26,7 @@
     .lang-pill-wrap:hover .lang-pill-visual { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.25); }
     .lang-select-overlay { position: absolute; inset: 0; opacity: 0; cursor: pointer; font-size: 16px; width: 100%; }
 
-    .page-hero { padding: 60px 48px 80px; background: linear-gradient(160deg, #0a5c55, #0d9488, #10a89a); }
+    .page-hero { padding: 60px 48px 80px; background: linear-gradient(160deg, #0a7068, #0d9488); }
     .page-hero-inner { max-width: 860px; margin: 0 auto; }
     .page-hero-label { font-size: 12px; font-weight: 700; color: var(--teal-400); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
     .page-hero-title { font-size: clamp(36px, 5vw, 60px); font-weight: 900; color: white; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
@@ -108,7 +108,6 @@
   var NS = 'background:rgba(13,148,136,0.08);border:1px solid rgba(13,148,136,0.2);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--gray-600);margin-bottom:28px;';
 
   var TERMS_BODIES = {
-    en: '<p style="' + NS + '">This legal document is provided in English as the authoritative version.</p>' +
       '<p>These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and Database LLC (&ldquo;Database,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your access to and use of the Database mobile application, website at <a href="https://mydatabaseapp.com">mydatabaseapp.com</a>, and all related services (collectively, the &ldquo;Service&rdquo;).</p>' +
       '<p>By downloading, installing, or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.</p>' +
       '<h2>1. Eligibility</h2>' +
@@ -163,7 +162,6 @@
       '<p>Questions about these Terms? Contact us at:</p>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, United States<br>Email: <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Website: <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    es: '<p style="' + NS + '">Este documento legal se proporciona en inglés como versión oficial.</p>' +
       '<p>Estos Términos de Servicio (&ldquo;Términos&rdquo;) constituyen un acuerdo legalmente vinculante entre usted y Database LLC (&ldquo;Database,&rdquo; &ldquo;nosotros&rdquo; o &ldquo;nuestro&rdquo;) que rige su acceso y uso de la aplicación móvil Database, el sitio web <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> y todos los servicios relacionados (el &ldquo;Servicio&rdquo;).</p>' +
       '<p>Al descargar, instalar o usar el Servicio, acepta estos Términos. Si no está de acuerdo, no use el Servicio.</p>' +
       '<h2>1. Elegibilidad</h2>' +
@@ -217,7 +215,6 @@
       '<p>¿Preguntas sobre estos Términos? Contáctenos:</p>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, Estados Unidos<br>Email: <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Sitio web: <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    fr: '<p style="' + NS + '">Ce document juridique est fourni en anglais en tant que version officielle de référence.</p>' +
       '<p>Ces Conditions d\'Utilisation (&ldquo;Conditions&rdquo;) constituent un accord légalement contraignant entre vous et Database LLC (&ldquo;Database,&rdquo; &ldquo;nous&rdquo; ou &ldquo;notre&rdquo;) régissant votre accès et utilisation de l\'application mobile Database, du site web <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> et de tous les services associés (le &ldquo;Service&rdquo;).</p>' +
       '<p>En téléchargeant, installant ou utilisant le Service, vous acceptez ces Conditions.</p>' +
       '<h2>1. Éligibilité</h2>' +
@@ -264,7 +261,6 @@
       '<h2>14. Contact</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Floride, États-Unis<br>Email : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Site : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    pt: '<p style="' + NS + '">Este documento jurídico é fornecido em inglês como versão oficial de referência.</p>' +
       '<p>Estes Termos de Serviço (&ldquo;Termos&rdquo;) constituem um acordo legalmente vinculante entre você e a Database LLC (&ldquo;Database,&rdquo; &ldquo;nós&rdquo; ou &ldquo;nosso&rdquo;) que rege seu acesso e uso do aplicativo móvel Database, site <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> e todos os serviços relacionados (o &ldquo;Serviço&rdquo;).</p>' +
       '<p>Ao baixar, instalar ou usar o Serviço, você concorda com estes Termos.</p>' +
       '<h2>1. Elegibilidade</h2>' +
@@ -311,7 +307,6 @@
       '<h2>14. Contato</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Flórida, EUA<br>Email : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Site : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    de: '<p style="' + NS + '">Dieses rechtliche Dokument wird in englischer Sprache als maßgebliche Fassung bereitgestellt.</p>' +
       '<p>Diese Nutzungsbedingungen (&ldquo;Bedingungen&rdquo;) stellen eine rechtsverbindliche Vereinbarung zwischen Ihnen und Database LLC (&ldquo;Database,&rdquo; &ldquo;wir,&rdquo; &ldquo;uns&rdquo; oder &ldquo;unser&rdquo;) dar, die Ihren Zugang zu und die Nutzung der mobilen Anwendung Database, der Website <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> und aller damit verbundenen Dienste (der &ldquo;Dienst&rdquo;) regelt.</p>' +
       '<p>Durch das Herunterladen, Installieren oder Verwenden des Dienstes stimmen Sie diesen Bedingungen zu.</p>' +
       '<h2>1. Berechtigung</h2>' +
@@ -358,7 +353,6 @@
       '<h2>14. Kontakt</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, USA<br>E-Mail : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Website : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    ht: '<p style="' + NS + '">Dokiman legal sa a ba ou an angle kòm vèsyon ofisyèl la.</p>' +
       '<p>Tèm Sèvis sa yo (&ldquo;Tèm&rdquo;) se yon akò legal ant ou menm ak Database LLC (&ldquo;Database,&rdquo; &ldquo;nou&rdquo; oswa &ldquo;pa nou&rdquo;) ki gouvène aksè ou ak itilizasyon ou nan aplikasyon mobil Database, sit entènèt <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> ak tout sèvis ki asosye yo (the &ldquo;Sèvis&rdquo;).</p>' +
       '<p>Lè ou telechaje, enstale, oswa itilize Sèvis la, ou dakò ak Tèm sa yo.</p>' +
       '<h2>1. Kalifikasyon</h2>' +
@@ -403,7 +397,6 @@
       '<h2>14. Kontakte Nou</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florid, Etazini<br>Imèl : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Sit : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    it: '<p style="' + NS + '">Questo documento legale è fornito in inglese come versione ufficiale di riferimento.</p>' +
       '<p>Questi Termini di Servizio (&ldquo;Termini&rdquo;) costituiscono un accordo legalmente vincolante tra te e Database LLC (&ldquo;Database,&rdquo; &ldquo;noi&rdquo; o &ldquo;nostro&rdquo;) che disciplina il tuo accesso e utilizzo dell\'applicazione mobile Database, del sito web <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> e di tutti i servizi correlati (il &ldquo;Servizio&rdquo;).</p>' +
       '<p>Scaricando, installando o utilizzando il Servizio, accetti questi Termini.</p>' +
       '<h2>1. Idoneità</h2>' +
@@ -450,7 +443,6 @@
       '<h2>14. Contatti</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, Stati Uniti<br>Email : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Sito : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    nl: '<p style="' + NS + '">Dit juridische document wordt in het Engels verstrekt als de officiële referentieversie.</p>' +
       '<p>Deze Servicevoorwaarden (&ldquo;Voorwaarden&rdquo;) vormen een juridisch bindende overeenkomst tussen u en Database LLC (&ldquo;Database,&rdquo; &ldquo;wij,&rdquo; &ldquo;ons&rdquo; of &ldquo;onze&rdquo;) die uw toegang tot en gebruik van de Database mobiele applicatie, de website <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> en alle gerelateerde diensten (de &ldquo;Dienst&rdquo;) regelt.</p>' +
       '<p>Door de Dienst te downloaden, installeren of gebruiken, gaat u akkoord met deze Voorwaarden.</p>' +
       '<h2>1. Geschiktheid</h2>' +
@@ -497,7 +489,6 @@
       '<h2>14. Contact</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, VS<br>E-mail : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Website : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    sv: '<p style="' + NS + '">Detta juridiska dokument tillhandahålls på engelska som den officiella referensversionen.</p>' +
       '<p>Dessa Användarvillkor (&ldquo;Villkor&rdquo;) utgör ett juridiskt bindande avtal mellan dig och Database LLC (&ldquo;Database,&rdquo; &ldquo;vi,&rdquo; &ldquo;oss&rdquo; eller &ldquo;vår&rdquo;) som reglerar din tillgång till och användning av Database mobilapplikation, webbplatsen <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> och alla relaterade tjänster (the &ldquo;Tjänsten&rdquo;).</p>' +
       '<p>Genom att ladda ner, installera eller använda Tjänsten godkänner du dessa Villkor.</p>' +
       '<h2>1. Behörighet</h2>' +
@@ -544,7 +535,6 @@
       '<h2>14. Kontakt</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, USA<br>E-post : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Webbplats : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    no: '<p style="' + NS + '">Dette juridiske dokumentet er levert på engelsk som den offisielle referanseversjon.</p>' +
       '<p>Disse Vilkårene for Bruk (&ldquo;Vilkår&rdquo;) utgjør en juridisk bindende avtale mellom deg og Database LLC (&ldquo;Database,&rdquo; &ldquo;vi,&rdquo; &ldquo;oss&rdquo; eller &ldquo;vår&rdquo;) som regulerer din tilgang til og bruk av Database mobilapplikasjon, nettstedet <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> og alle relaterte tjenester (the &ldquo;Tjenesten&rdquo;).</p>' +
       '<p>Ved å laste ned, installere eller bruke Tjenesten, godtar du disse Vilkårene.</p>' +
       '<h2>1. Berettigelse</h2>' +
@@ -591,7 +581,6 @@
       '<h2>14. Kontakt</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, USA<br>E-post : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Nettsted : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    da: '<p style="' + NS + '">Dette juridiske dokument er leveret på engelsk som den officielle referencesversion.</p>' +
       '<p>Disse Servicevilkår (&ldquo;Vilkår&rdquo;) udgør en juridisk bindende aftale mellem dig og Database LLC (&ldquo;Database,&rdquo; &ldquo;vi,&rdquo; &ldquo;os&rdquo; eller &ldquo;vores&rdquo;) der regulerer din adgang til og brug af Database mobilapplikationen, webstedet <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> og alle relaterede tjenester (the &ldquo;Tjenesten&rdquo;).</p>' +
       '<p>Ved at downloade, installere eller bruge Tjenesten accepterer du disse Vilkår.</p>' +
       '<h2>1. Berettigelse</h2>' +
@@ -638,7 +627,6 @@
       '<h2>14. Kontakt</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, USA<br>E-mail : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Websted : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    fi: '<p style="' + NS + '">Tämä oikeudellinen asiakirja toimitetaan englanniksi virallisena viiteversiona.</p>' +
       '<p>Nämä Käyttöehdot (&ldquo;Ehdot&rdquo;) muodostavat oikeudellisesti sitovan sopimuksen sinun ja Database LLC:n (&ldquo;Database,&rdquo; &ldquo;me,&rdquo; &ldquo;meille&rdquo; tai &ldquo;meidän&rdquo;) välillä, joka koskee Database-mobiilisovelluksen, verkkosivuston <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> ja kaikkien niihin liittyvien palvelujen käyttöä (the &ldquo;Palvelu&rdquo;).</p>' +
       '<p>Lataamalla, asentamalla tai käyttämällä Palvelua hyväksyt nämä Ehdot.</p>' +
       '<h2>1. Kelpoisuus</h2>' +
@@ -685,7 +673,6 @@
       '<h2>14. Yhteystiedot</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, Yhdysvallat<br>Sähköposti : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Verkkosivusto : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    is: '<p style="' + NS + '">Þetta lagalegt skjal er veitt á ensku sem opinber tilvísunarútgáfa.</p>' +
       '<p>Þessir Þjónustuskilmálar (&ldquo;Skilmálar&rdquo;) eru lagalega bindandi samningur á milli þín og Database LLC (&ldquo;Database,&rdquo; &ldquo;við,&rdquo; &ldquo;okkur&rdquo; eða &ldquo;okkar&rdquo;) sem stjórnar aðgangi þínum og notkun á farsímaforritinu Database, vefsíðunni <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> og öllum tengdum þjónustum (the &ldquo;Þjónustan&rdquo;).</p>' +
       '<p>Með því að hlaða niður, setja upp eða nota Þjónustuna samþykkir þú þessa Skilmála.</p>' +
       '<h2>1. Hæfi</h2>' +
@@ -730,7 +717,6 @@
       '<h2>14. Hafa Samband</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Flórída, Bandaríkin<br>Netfang : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Vefur : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    ru: '<p style="' + NS + '">Данный юридический документ предоставлен на английском языке в качестве официальной версии.</p>' +
       '<p>Настоящие Условия Использования (&ldquo;Условия&rdquo;) являются юридически обязательным соглашением между вами и Database LLC (&ldquo;Database,&rdquo; &ldquo;мы,&rdquo; &ldquo;нас&rdquo; или &ldquo;наш&rdquo;), регулирующим ваш доступ к мобильному приложению Database, сайту <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> и всем связанным сервисам (the &ldquo;Сервис&rdquo;).</p>' +
       '<p>Загружая, устанавливая или используя Сервис, вы соглашаетесь с настоящими Условиями.</p>' +
       '<h2>1. Право на Использование</h2>' +
@@ -777,7 +763,6 @@
       '<h2>14. Контакты</h2>' +
       '<p><strong>Database LLC</strong><br>Майами, Флорида, США<br>Email : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Сайт : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    tr: '<p style="' + NS + '">Bu hukuki belge, resmi referans sürümü olarak İngilizce olarak sunulmaktadır.</p>' +
       '<p>Bu Hizmet Şartları (&ldquo;Şartlar&rdquo;), siz ve Database LLC (&ldquo;Database,&rdquo; &ldquo;biz,&rdquo; &ldquo;bize&rdquo; veya &ldquo;bizim&rdquo;) arasında Database mobil uygulamasına, <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> web sitesine ve tüm ilgili hizmetlere (the &ldquo;Hizmet&rdquo;) erişiminizi ve kullanımınızı düzenleyen yasal bağlayıcı bir anlaşma oluşturmaktadır.</p>' +
       '<p>Hizmeti indirerek, yükleyerek veya kullanarak bu Şartları kabul etmiş olursunuz.</p>' +
       '<h2>1. Uygunluk</h2>' +
@@ -824,7 +809,6 @@
       '<h2>14. İletişim</h2>' +
       '<p><strong>Database LLC</strong><br>Miami, Florida, ABD<br>E-posta : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>Web sitesi : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    zh: '<p style="' + NS + '">本法律文件以英文版本为官方参考版本。</p>' +
       '<p>本服务条款（"条款"）是您与Database LLC（"Database"、"我们"或"我方"）之间的具有法律约束力的协议，规范您对Database移动应用程序、网站 <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> 及所有相关服务（统称"服务"）的访问和使用。</p>' +
       '<p>下载、安装或使用本服务，即表示您同意本条款。</p>' +
       '<h2>1. 使用资格</h2>' +
@@ -871,7 +855,6 @@
       '<h2>14. 联系方式</h2>' +
       '<p><strong>Database LLC</strong><br>美国佛罗里达州迈阿密<br>邮箱：<a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>网站：<a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    ko: '<p style="' + NS + '">이 법적 문서는 공식 참고 버전으로 영어로 제공됩니다.</p>' +
       '<p>본 이용약관("약관")은 귀하와 Database LLC("Database", "당사" 또는 "우리") 사이의 법적 구속력 있는 계약으로, Database 모바일 애플리케이션, 웹사이트 <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> 및 모든 관련 서비스("서비스")에 대한 귀하의 접근 및 사용을 규율합니다.</p>' +
       '<p>서비스를 다운로드, 설치 또는 사용함으로써 본 약관에 동의하는 것입니다.</p>' +
       '<h2>1. 자격</h2>' +
@@ -918,7 +901,6 @@
       '<h2>14. 문의</h2>' +
       '<p><strong>Database LLC</strong><br>미국 플로리다주 마이애미<br>이메일 : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>웹사이트 : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>',
 
-    ja: '<p style="' + NS + '">本法的文書は、公式参照版として英語で提供されています。</p>' +
       '<p>本利用規約（以下「規約」）は、お客様とDatabase LLC（以下「Database」「当社」）の間の法的拘束力のある契約であり、Databaseモバイルアプリケーション、ウェブサイト <a href="https://mydatabaseapp.com">mydatabaseapp.com</a> および関連するすべてのサービス（以下「サービス」）へのアクセスおよび使用を規定します。</p>' +
       '<p>サービスをダウンロード、インストール、または使用することで、本規約に同意したものとみなします。</p>' +
       '<h2>1. 利用資格</h2>' +
