@@ -26,7 +26,7 @@
     .lang-pill-wrap:hover .lang-pill-visual { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.25); }
     .lang-select-overlay { position: absolute; inset: 0; opacity: 0; cursor: pointer; font-size: 16px; width: 100%; }
 
-    .page-hero { padding: 60px 48px 80px; background: linear-gradient(160deg, #0a7068, #0d9488); }
+    .page-hero { padding: 60px 48px 80px; background: #0a7068; }
     .page-hero-inner { max-width: 860px; margin: 0 auto; }
     .page-hero-label { font-size: 12px; font-weight: 700; color: var(--teal-400); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
     .page-hero-title { font-size: clamp(36px, 5vw, 60px); font-weight: 900; color: white; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
@@ -59,7 +59,7 @@
 </head>
 <body>
 
-<div style="background:linear-gradient(160deg,#0a7068 0%,#0d9488 100%);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<div style="background:#0a7068;padding:24px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
   <a href="index.html" id="back-link" style="display:inline-flex;align-items:center;text-decoration:none;">
     <img src="logo-cropped.png" alt="Database" style="height:36px;width:auto;filter:brightness(0) invert(1);" />
   </a>
@@ -107,7 +107,7 @@
 
   var NS = 'background:rgba(13,148,136,0.08);border:1px solid rgba(13,148,136,0.2);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--gray-600);margin-bottom:28px;';
 
-  var TERMS_BODIES = {
+  var TERMS_BODIES = [
       '<p>These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and Database LLC (&ldquo;Database,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your access to and use of the Database mobile application, website at <a href="https://mydatabaseapp.com">mydatabaseapp.com</a>, and all related services (collectively, the &ldquo;Service&rdquo;).</p>' +
       '<p>By downloading, installing, or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.</p>' +
       '<h2>1. Eligibility</h2>' +
@@ -946,7 +946,7 @@
       '<p>少なくとも30日前の通知をもって本規約を変更することができます。継続的な使用は承諾を構成します。</p>' +
       '<h2>14. お問い合わせ</h2>' +
       '<p><strong>Database LLC</strong><br>米国フロリダ州マイアミ<br>メール : <a href="mailto:support@mydatabaseapp.com">support@mydatabaseapp.com</a><br>ウェブサイト : <a href="https://mydatabaseapp.com">https://mydatabaseapp.com</a></p>'
-  };
+  ];
 
   function switchLang(lang) {
     try { localStorage.setItem('db_lang', lang); } catch(e) {}
@@ -962,7 +962,7 @@
     var sel = document.querySelector('.lang-select-overlay'); if (sel) sel.value = lang;
     document.documentElement.lang = lang;
     var bodyEl = document.getElementById('terms-body');
-    if (bodyEl) bodyEl.innerHTML = TERMS_BODIES[lang] || TERMS_BODIES['en'];
+    if (bodyEl) bodyEl.innerHTML = TERMS_BODIES[Object.keys(LANG_NAMES).indexOf(lang)] || TERMS_BODIES[0];
     var url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
     history.pushState({}, '', url.toString());
