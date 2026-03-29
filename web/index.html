@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1274,9 +1273,8 @@
       <div>
         <div class="footer-col-title" data-i18n="footer_col_legal">Legal</div>
         <div class="footer-col-links">
-          <a href="/privacy?lang=en" id="link-privacy" data-i18n="footer_privacy">Privacy Policy</a>
-          <a href="/terms?lang=en" id="link-terms" data-i18n="footer_terms">Terms of Service</a>
-          <a href="mailto:support@mydatabaseapp.com" data-i18n="footer_support">Support</a>
+          <a href="privacy.html?lang=en" id="link-privacy" data-i18n="footer_privacy">Privacy Policy</a>
+          <a href="terms.html?lang=en" id="link-terms" data-i18n="footer_terms">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -1326,8 +1324,8 @@
     // Update privacy/terms links
     var lp = document.getElementById('link-privacy');
     var lt = document.getElementById('link-terms');
-    if (lp) lp.href = '/privacy?lang=' + lang;
-    if (lt) lt.href = '/terms?lang=' + lang;
+    if (lp) lp.href = 'privacy.html?lang=' + lang;
+    if (lt) lt.href = 'terms.html?lang=' + lang;
     // Update pill text
     var pill = document.getElementById('lang-pill-text');
     if (pill) pill.textContent = LANG_NAMES[lang] || lang;
@@ -1357,6 +1355,20 @@
     if (sel && lang && I18N[lang]) sel.value = lang;
   })();
 
+
+
+  // ── Twemoji: render emoji flags as images (cross-platform) ──────
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js';
+    s.crossOrigin = 'anonymous';
+    s.onload = function() {
+      if (typeof twemoji !== 'undefined') {
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+      }
+    };
+    document.head.appendChild(s);
+  })();
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
