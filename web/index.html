@@ -1253,10 +1253,10 @@
             <img
               src="promotions-mock.png"
               alt="Share this promotion screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+              style="width:100%;height:auto;object-fit:contain;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
-            <!-- Top vignette — status bar / handle blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <!-- Top vignette — very subtle, does NOT cover header -->
+            <div style="position:absolute;top:0;left:0;right:0;height:32px;background:linear-gradient(to bottom,rgba(10,15,26,0.18),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
