@@ -1076,32 +1076,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:32px 24px;width:100%;">
-              <div style="font-size:18px;font-weight:800;color:white;margin-bottom:20px;" data-i18n="s5_mock_title">Team</div>
-              <div style="display:flex;flex-direction:column;gap:10px;">
-                <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:14px;padding:12px 14px;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#14b8a6,#0d9488);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;flex-shrink:0;">JD</div>
-                  <div><div style="font-size:13px;font-weight:600;color:white;">James D.</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s5_mock_owner">Owner</div></div>
-                  <div style="margin-left:auto;background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);color:#2dd4bf;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s5_mock_owner_badge">Owner</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:14px;padding:12px 14px;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;flex-shrink:0;">SM</div>
-                  <div><div style="font-size:13px;font-weight:600;color:white;">Sarah M.</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s5_mock_manager">Manager</div></div>
-                  <div style="margin-left:auto;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);color:#818cf8;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s5_mock_manager_badge">Manager</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:14px;padding:12px 14px;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#ef4444);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;flex-shrink:0;">AL</div>
-                  <div><div style="font-size:13px;font-weight:600;color:white;">Alex L.</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s5_mock_staff">Staff</div></div>
-                  <div style="margin-left:auto;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s5_mock_staff_badge">Staff</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:14px;padding:12px 14px;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#10b981,#0891b2);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;flex-shrink:0;">KR</div>
-                  <div><div style="font-size:13px;font-weight:600;color:white;">Kim R.</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s5_mock_staff">Staff</div></div>
-                  <div style="margin-left:auto;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s5_mock_staff_badge">Staff</div>
-                </div>
-              </div>
-            </div>
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — fills frame, top-cropped for natural phone feel -->
+            <img
+              src="staff-mock.png"
+              alt="Stores, Staff &amp; Calendar"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.95) contrast(1.05) saturate(1.06);"
+            />
+            <!-- Top vignette — merges status bar edge into the dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — smooth transition into section background -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen ties image to design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1129,54 +1119,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:28px 20px;width:100%;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                <div style="font-size:16px;font-weight:800;color:white;" data-i18n="s6_mock_march">March 2026</div>
-                <div style="display:flex;gap:8px;">
-                  <div style="font-size:16px;color:rgba(255,255,255,0.4);">‹</div>
-                  <div style="font-size:16px;color:rgba(255,255,255,0.4);">›</div>
-                </div>
-              </div>
-              <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:4px;">
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">S</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">M</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">T</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">W</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">T</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">F</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;">S</div>
-              </div>
-              <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;">
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.25);border-radius:6px;"></div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.25);border-radius:6px;"></div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">1</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(20,184,166,0.9);font-weight:600;border-radius:6px;background:rgba(20,184,166,0.15);">2</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">3</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(20,184,166,0.9);font-weight:600;border-radius:6px;background:rgba(20,184,166,0.15);">4</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">5</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">6</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(20,184,166,0.9);font-weight:600;border-radius:6px;background:rgba(20,184,166,0.15);">7</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">8</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">9</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(20,184,166,0.9);font-weight:600;border-radius:6px;background:rgba(20,184,166,0.15);">10</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">11</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">12</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">13</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;background:var(--teal-600);color:white;font-weight:700;border-radius:6px;">14</div>
-                <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.6);border-radius:6px;">15</div>
-              </div>
-              <div style="margin-top:14px;display:flex;flex-direction:column;gap:6px;">
-                <div style="background:rgba(20,184,166,0.15);border-left:3px solid #14b8a6;border-radius:0 8px 8px 0;padding:7px 10px;">
-                  <div style="font-size:11px;font-weight:600;color:white;" data-i18n="s6_mock_appt1">10:00 AM — Haircut &amp; Style</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Sarah M.</div>
-                </div>
-                <div style="background:rgba(99,102,241,0.15);border-left:3px solid #6366f1;border-radius:0 8px 8px 0;padding:7px 10px;">
-                  <div style="font-size:11px;font-weight:600;color:white;" data-i18n="s6_mock_appt2">2:30 PM — Color Treatment</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Alex L.</div>
-                </div>
-              </div>
-            </div>
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — staff profile / schedule view -->
+            <img
+              src="calendar-mock.jpg"
+              alt="Staff Profile &amp; Schedule screen"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.95) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — status bar blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — transitions into section-deep background -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen, ties to design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1273,34 +1231,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:28px 20px;width:100%;">
-              <div style="font-size:15px;font-weight:800;color:white;margin-bottom:18px;" data-i18n="s8_mock_title">Language</div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);border-radius:12px;padding:10px 12px;">
-                  <span style="font-size:16px;">🇺🇸</span>
-                  <span style="font-size:12px;font-weight:600;color:white;">English</span>
-                  <div style="margin-left:auto;width:16px;height:16px;border-radius:50%;background:#14b8a6;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;">✓</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:12px;padding:10px 12px;">
-                  <span style="font-size:16px;">🇪🇸</span>
-                  <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);">Español</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:12px;padding:10px 12px;">
-                  <span style="font-size:16px;">🇫🇷</span>
-                  <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);">Français</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:12px;padding:10px 12px;">
-                  <span style="font-size:16px;">🇩🇪</span>
-                  <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);">Deutsch</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:12px;padding:10px 12px;">
-                  <span style="font-size:16px;">🇯🇵</span>
-                  <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);">日本語</span>
-                </div>
-                <div style="text-align:center;font-size:10px;color:rgba(255,255,255,0.35);padding-top:4px;" data-i18n="s8_mock_more">+ 13 more languages</div>
-              </div>
-            </div>
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Branding & Notifications / compliance & language settings -->
+            <img
+              src="language-mock.png"
+              alt="Email Footer Language &amp; Compliance settings"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — header blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — "Save Changes" CTA transitions into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1328,26 +1274,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:28px 20px;width:100%;">
-              <div style="font-size:16px;font-weight:800;color:white;margin-bottom:16px;" data-i18n="s9_mock_title">Promotions</div>
-              <div style="background:linear-gradient(135deg,#0d9488,#0fbfb0);border-radius:16px;padding:18px;margin-bottom:10px;">
-                <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:.05em;text-transform:uppercase;" data-i18n="s9_mock_active">Active</div>
-                <div style="font-size:18px;font-weight:900;color:white;margin:6px 0 4px;" data-i18n="s9_mock_promo1">20% Off First Visit</div>
-                <div style="font-size:10px;color:rgba(255,255,255,0.7);" data-i18n="s9_mock_exp">Expires Mar 31</div>
-                <div style="margin-top:12px;display:flex;gap:8px;">
-                  <div style="background:rgba(255,255,255,0.2);border-radius:8px;padding:6px 10px;font-size:9px;font-weight:700;color:white;" data-i18n="s9_mock_share">Share</div>
-                  <div style="background:rgba(255,255,255,0.2);border-radius:8px;padding:6px 10px;font-size:9px;font-weight:700;color:white;" data-i18n="s9_mock_qr">QR Code</div>
-                </div>
-              </div>
-              <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;display:flex;justify-content:space-between;align-items:center;">
-                <div>
-                  <div style="font-size:12px;font-weight:700;color:white;" data-i18n="s9_mock_promo2">Buy 5 Get 1 Free</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s9_mock_redeemed">14 redeemed</div>
-                </div>
-                <div style="font-size:10px;font-weight:700;color:#34d399;" data-i18n="s9_mock_live">Live</div>
-              </div>
-            </div>
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Share Promotion screen -->
+            <img
+              src="promotions-mock.png"
+              alt="Share this promotion screen"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.95) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — status bar / handle blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — smooth exit into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1375,19 +1317,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:24px 18px;width:100%;">
-              <div style="font-size:15px;font-weight:800;color:white;margin-bottom:14px;" data-i18n="s10_mock_title">AI Advisor</div>
-              <div style="background:rgba(20,184,166,0.12);border:1px solid rgba(20,184,166,0.25);border-radius:14px;padding:14px;margin-bottom:10px;">
-                <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:6px;" data-i18n="s10_mock_q">You asked:</div>
-                <div style="font-size:12px;font-weight:600;color:white;" data-i18n="s10_mock_question">Which clients are at risk of not returning?</div>
-              </div>
-              <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;">
-                <div style="font-size:10px;color:#2dd4bf;font-weight:700;margin-bottom:8px;" data-i18n="s10_mock_ai">AI Insight</div>
-                <div style="font-size:11px;color:rgba(255,255,255,0.8);line-height:1.5;" data-i18n="s10_mock_answer">3 high-value clients haven't booked in 45+ days. I recommend sending them a personalized re-engagement offer this week.</div>
-                <div style="margin-top:10px;background:rgba(20,184,166,0.2);border-radius:8px;padding:8px 12px;font-size:10px;font-weight:700;color:#2dd4bf;text-align:center;" data-i18n="s10_mock_action">Create Campaign →</div>
-              </div>
-            </div>
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — AI Business Insights screen -->
+            <img
+              src="ai-advisor-mock.png"
+              alt="AI Business Insights — Ask me anything"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — header / handle blends into frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — smooth exit into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1415,30 +1360,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:24px 18px;width:100%;">
-              <div style="font-size:15px;font-weight:800;color:white;margin-bottom:14px;" data-i18n="s11_mock_title">Email Campaign</div>
-              <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.4);">
-                <div style="background:linear-gradient(135deg,#0d9488,#14b8a6);padding:16px;text-align:center;">
-                  <div style="font-size:14px;font-weight:900;color:white;">Database</div>
-                </div>
-                <div style="padding:14px;">
-                  <div style="font-size:12px;font-weight:700;color:#0f172a;margin-bottom:6px;" data-i18n="s11_mock_subj">We miss you, Sarah!</div>
-                  <div style="font-size:10px;color:#64748b;line-height:1.5;" data-i18n="s11_mock_body">It's been a while since your last visit. Book today and enjoy 15% off your next appointment.</div>
-                  <div style="margin-top:12px;background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:8px;padding:8px;text-align:center;font-size:10px;font-weight:700;color:white;" data-i18n="s11_mock_cta">Book Now</div>
-                </div>
-              </div>
-              <div style="margin-top:10px;display:flex;gap:8px;">
-                <div style="flex:1;background:rgba(255,255,255,0.06);border-radius:10px;padding:10px;text-align:center;">
-                  <div style="font-size:16px;font-weight:800;color:#2dd4bf;">68%</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s11_mock_open">Open Rate</div>
-                </div>
-                <div style="flex:1;background:rgba(255,255,255,0.06);border-radius:10px;padding:10px;text-align:center;">
-                  <div style="font-size:16px;font-weight:800;color:#2dd4bf;">24%</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:2px;" data-i18n="s11_mock_click">Click Rate</div>
-                </div>
-              </div>
-            </div>
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Drip Campaigns / Assign & Manage screen -->
+            <img
+              src="email-mock.png"
+              alt="Drip Campaigns — Assign &amp; Manage"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — header blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — teal CTA bar transitions into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1466,27 +1403,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:24px 18px;width:100%;">
-              <div style="background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:16px;padding:16px;margin-bottom:12px;">
-                <div style="font-size:12px;font-weight:800;color:white;margin-bottom:4px;" data-i18n="s12_mock_biz">McDowells Salon</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.7);" data-i18n="s12_mock_link">mcdowells.database.app</div>
-                <div style="margin-top:10px;background:rgba(0,0,0,0.2);border-radius:8px;padding:8px;display:flex;align-items:center;gap:6px;">
-                  <div style="width:28px;height:28px;background:white;border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-                    <div style="width:18px;height:18px;background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:2px;"></div>
-                  </div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.8);" data-i18n="s12_mock_scan">Scan to book instantly</div>
-                </div>
-              </div>
-              <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:8px;" data-i18n="s12_mock_avail">Available today</div>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;">
-                <div style="background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;color:#2dd4bf;">10:00</div>
-                <div style="background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;color:#2dd4bf;">11:30</div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.25);text-decoration:line-through;">1:00</div>
-                <div style="background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;color:#2dd4bf;">2:30</div>
-                <div style="background:rgba(20,184,166,0.15);border:1px solid rgba(20,184,166,0.3);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;color:#2dd4bf;">4:00</div>
-              </div>
-            </div>
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Branding & Notifications / Notifications tab -->
+            <img
+              src="booking-mock.png"
+              alt="Branding &amp; Notifications — Notifications settings"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — header blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — "Save Changes" CTA transitions into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1514,42 +1446,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:24px 18px;width:100%;">
-              <div style="font-size:15px;font-weight:800;color:white;margin-bottom:16px;" data-i18n="s13_mock_title">My Locations</div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-                    <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s13_mock_store1">Downtown Flagship</div>
-                    <div style="background:rgba(20,184,166,0.2);color:#2dd4bf;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s13_mock_open">Open</div>
-                  </div>
-                  <div style="display:flex;gap:12px;">
-                    <div><div style="font-size:14px;font-weight:800;color:#2dd4bf;">$3,240</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_rev">This month</div></div>
-                    <div><div style="font-size:14px;font-weight:800;color:white;">47</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_appts">Appts</div></div>
-                  </div>
-                </div>
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-                    <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s13_mock_store2">Westside Location</div>
-                    <div style="background:rgba(20,184,166,0.2);color:#2dd4bf;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s13_mock_open">Open</div>
-                  </div>
-                  <div style="display:flex;gap:12px;">
-                    <div><div style="font-size:14px;font-weight:800;color:#2dd4bf;">$2,180</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_rev">This month</div></div>
-                    <div><div style="font-size:14px;font-weight:800;color:white;">31</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_appts">Appts</div></div>
-                  </div>
-                </div>
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-                    <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s13_mock_store3">Airport Terminal</div>
-                    <div style="background:rgba(245,158,11,0.2);color:#fbbf24;font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;" data-i18n="s13_mock_closed">Closed</div>
-                  </div>
-                  <div style="display:flex;gap:12px;">
-                    <div><div style="font-size:14px;font-weight:800;color:#2dd4bf;">$890</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_rev">This month</div></div>
-                    <div><div style="font-size:14px;font-weight:800;color:white;">12</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px;" data-i18n="s13_mock_appts">Appts</div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Stores, Staff & Calendar / Stores & Staff tab -->
+            <img
+              src="multi-store-mock.png"
+              alt="Stores, Staff &amp; Calendar — Stores &amp; Staff view"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — header blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.6),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — smooth exit into frame edge -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
