@@ -1162,48 +1162,22 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;display:flex;align-items:center;justify-content:center;">
-            <div style="padding:28px 20px;width:100%;">
-              <div style="font-size:16px;font-weight:800;color:white;margin-bottom:16px;" data-i18n="s7_mock_title">Services</div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s7_mock_s1">Haircut &amp; Style</div>
-                      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;" data-i18n="s7_mock_s1_dur">45 min</div>
-                    </div>
-                    <div style="font-size:14px;font-weight:800;color:#2dd4bf;">$45</div>
-                  </div>
-                </div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s7_mock_s2">Color Treatment</div>
-                      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;" data-i18n="s7_mock_s2_dur">90 min</div>
-                    </div>
-                    <div style="font-size:14px;font-weight:800;color:#2dd4bf;">$120</div>
-                  </div>
-                </div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s7_mock_s3">Deep Conditioning</div>
-                      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;" data-i18n="s7_mock_s3_dur">30 min</div>
-                    </div>
-                    <div style="font-size:14px;font-weight:800;color:#2dd4bf;">$35</div>
-                  </div>
-                </div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:14px;padding:14px;">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:white;" data-i18n="s7_mock_s4">Blowout</div>
-                      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;" data-i18n="s7_mock_s4_dur">60 min</div>
-                    </div>
-                    <div style="font-size:14px;font-weight:800;color:#2dd4bf;">$65</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+            <!-- Real screenshot — Services & Products management screen -->
+            <img
+              src="assets/services-mock.png"
+              alt="Services &amp; Products Screen"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+            />
+            <!-- Top vignette — merges status bar edge into the dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <!-- Side vignettes — depth & border integration -->
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <!-- Bottom fade — smooth transition into section background -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <!-- Brand gloss — teal diagonal sheen ties image to design system -->
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1277,9 +1251,9 @@
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Share Promotion screen -->
             <img
-              src="promotions-mock.png"
+              src="assets/promotions-mock.png"
               alt="Share this promotion screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.95) contrast(1.05) saturate(1.05);"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
             <!-- Top vignette — status bar / handle blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
