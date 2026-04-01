@@ -930,12 +930,17 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <img
               src="/clients-screenshot-v3.jpg"
               alt="Clients Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:44px;"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -964,12 +969,17 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <img
               src="/appointments-screenshot-v2.jpg"
               alt="Appointments Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:44px;"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1046,12 +1056,17 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <img
               src="/promotions-screenshot-v2.jpg"
               alt="Promotions Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:44px;"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1264,8 +1279,8 @@
               alt="Share this promotion screen"
               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
-            <!-- Top vignette — very subtle, does NOT cover header -->
-            <div style="position:absolute;top:0;left:0;right:0;height:32px;background:linear-gradient(to bottom,rgba(10,15,26,0.18),transparent);pointer-events:none;"></div>
+            <!-- Top vignette — status bar blends into dark frame -->
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
@@ -1345,12 +1360,16 @@
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
-            <!-- Real screenshot — Drip Campaigns / Assign & Manage screen (composited with vignettes + rounded corners) -->
             <img
               src="email-mock.jpg"
               alt="Drip Campaigns — Assign &amp; Manage"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
+            <div style="position:absolute;top:0;left:0;right:0;height:72px;background:linear-gradient(to bottom,rgba(10,15,26,0.65),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(10,15,26,0.88));pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
       </div>
@@ -1424,7 +1443,7 @@
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Stores, Staff & Calendar / Stores & Staff tab -->
             <img
-              src="multi-store-mock.png"
+              src="multi-store-mock.jpg"
               alt="Stores, Staff &amp; Calendar — Stores &amp; Staff view"
               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
             />
