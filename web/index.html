@@ -143,20 +143,6 @@
     .phone-screen-inner {
       display: flex; flex-direction: column; flex: 1; overflow: hidden;
     }
-    .app-statusbar {
-      height: 44px; background: transparent;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 20px; position: relative; z-index: 5; flex-shrink: 0;
-    }
-    .app-statusbar-time { font-size: 13px; font-weight: 700; color: white; }
-    .app-statusbar-icons { display: flex; gap: 4px; align-items: center; }
-    .app-statusbar-icons span { font-size: 10px; color: white; }
-    .phone-di {
-      width: 90px; height: 26px; background: #000; border-radius: 20px;
-      position: absolute; left: 50%; transform: translateX(-50%); top: 9px;
-    }
-    .sb-signal { font-size: 8px; color: rgba(255,255,255,0.9); letter-spacing: 1px; }
-    .sb-battery { font-size: 8px; color: rgba(255,255,255,0.9); }
 
     .app-header {
       padding: 8px 20px 12px; display: flex; align-items: center; justify-content: space-between;
@@ -872,11 +858,14 @@
       <div class="phone-stage">
         <div class="phone-frame">
           <div class="phone-screen" style="background:#0a0f1a;">
-            <img
-              src="/dashboard-clean-v2.webp"
-              alt="App Dashboard"
-              style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="/dashboard-clean-v2.webp" type="image/webp">
+              <img
+                src="/dashboard-clean-v2.jpg"
+                alt="App Dashboard"
+                style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -931,12 +920,15 @@
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
-            
-            <img
-              src="/clients-screenshot-v3.webp"
-              alt="Clients Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="/clients-screenshot-v3.webp" type="image/webp">
+              <img
+                src="/clients-screenshot-v3.jpg"
+                alt="Clients Screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
@@ -972,11 +964,14 @@
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             
-            <img
-              src="/appointments-screenshot-v2.webp"
-              alt="Appointments Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="/appointments-screenshot-v2.webp" type="image/webp">
+              <img
+                src="/appointments-screenshot-v2.jpg"
+                alt="Appointments Screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
@@ -1026,11 +1021,14 @@
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;">
-            <img
-              src="/analytics-screenshot-v1.webp"
-              alt="Analytics Screen"
-              style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="/analytics-screenshot-v1.webp" type="image/webp">
+              <img
+                src="/analytics-screenshot-v1.jpg"
+                alt="Analytics Screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block;border-radius:44px;"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -1059,11 +1057,14 @@
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
-            <img
-              src="/promotions-screenshot-v2.webp"
-              alt="Promotions Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="/promotions-screenshot-v2.webp" type="image/webp">
+              <img
+                src="/promotions-screenshot-v2.jpg"
+                alt="Promotions Screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
@@ -1102,11 +1103,14 @@
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — fills frame, top-cropped for natural phone feel -->
             
-            <img
-              src="staff-mock-v2.webp"
-              alt="Stores, Staff &amp; Calendar"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="staff-mock-v2.webp" type="image/webp">
+              <img
+                src="staff-mock-v2.jpg"
+                alt="Stores, Staff &amp; Calendar"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <!-- Top vignette — merges status bar edge into the dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
@@ -1146,12 +1150,15 @@
         <div class="phone-wrap" style="overflow:visible;padding:32px 0;">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — staff profile / schedule view -->
-            
-            <img
-              src="calendar-mock-v2.webp"
-              alt="Staff Profile &amp; Schedule screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="calendar-mock-v2.webp" type="image/webp">
+              <img
+                src="calendar-mock-v2.jpg"
+                alt="Staff Profile &amp; Schedule screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;transform:scale(1.19);transform-origin:top center;"
+              />
+            </picture>
             <!-- Top vignette — status bar blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
@@ -1190,11 +1197,14 @@
         <div class="phone-wrap">
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Services & Products management screen -->
-            <img
-              src="services-mock.webp"
-              alt="Services &amp; Products Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="services-mock.webp" type="image/webp">
+              <img
+                src="services-mock.png"
+                alt="Services &amp; Products Screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <!-- Top vignette — merges status bar edge into the dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
@@ -1234,9 +1244,9 @@
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Branding & Notifications / compliance & language settings -->
             <img
-              src="language-mock.webp"
+              src="language-mock.png"
               alt="Email Footer Language &amp; Compliance settings"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
             <!-- Top vignette — header blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
@@ -1279,11 +1289,14 @@
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Share Promotion screen -->
             
-            <img
-              src="promotions-mock-v2.webp"
-              alt="Share this promotion screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="promotions-mock-v2.webp" type="image/webp">
+              <img
+                src="promotions-mock-v2.jpg"
+                alt="Share this promotion screen"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <!-- Top vignette — status bar blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
@@ -1324,9 +1337,9 @@
             <!-- Real screenshot — AI Business Insights screen -->
             
             <img
-              src="ai-advisor-mock.webp"
+              src="ai-advisor-mock.png"
               alt="AI Business Insights — Ask me anything"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
             <!-- Top vignette — header / handle blends into frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
@@ -1367,11 +1380,14 @@
         <div class="phone-wrap">
           <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             
-            <img
-              src="email-mock.webp"
-              alt="Drip Campaigns — Assign &amp; Manage"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="email-mock.webp" type="image/webp">
+              <img
+                src="email-mock.jpg"
+                alt="Drip Campaigns — Assign &amp; Manage"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
@@ -1408,9 +1424,9 @@
             <!-- Real screenshot — Branding & Notifications / Notifications tab -->
             
             <img
-              src="booking-mock.webp"
+              src="booking-mock.png"
               alt="Branding &amp; Notifications — Notifications settings"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
             <!-- Top vignette — header blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
@@ -1451,11 +1467,14 @@
           <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
             <!-- Real screenshot — Stores, Staff & Calendar / Stores & Staff tab -->
             
-            <img
-              src="multi-store-mock.webp"
-              alt="Stores, Staff &amp; Calendar — Stores &amp; Staff view"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(0.96) contrast(1.05) saturate(1.05);"
-            />
+            <picture style="width:100%;height:100%;display:block;">
+              <source srcset="multi-store-mock.webp" type="image/webp">
+              <img
+                src="multi-store-mock.png"
+                alt="Stores, Staff &amp; Calendar — Stores &amp; Staff view"
+                style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
+              />
+            </picture>
             <!-- Top vignette — header blends into dark frame -->
             <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
             <!-- Side vignettes — depth & border integration -->
