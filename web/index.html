@@ -298,6 +298,7 @@
     .phone-wrap { position: relative; display: flex; justify-content: center; padding: 24px 0; }
     .phone-mock {
       width: 260px; height: 540px;
+      padding: 0 3px; box-sizing: border-box;
       background: linear-gradient(160deg, #1a2438, #0d1525);
       border-radius: 42px;
       border: 1.5px solid rgba(255,255,255,0.12);
@@ -861,7 +862,7 @@
             <img
               src="/dashboard-clean-v2.webp"
               alt="App Dashboard"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
           </div>
         </div>
@@ -916,16 +917,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
 
             <img
               src="/clients-screenshot-v3.webp"
               alt="Clients Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             
             <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
@@ -956,16 +954,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             
             <img
               src="/appointments-screenshot-v2.webp"
               alt="Appointments Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             
             <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
@@ -1011,15 +1006,12 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <img
               src="/analytics-screenshot-v1.webp"
               alt="Analytics Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
         </div>
@@ -1048,15 +1040,12 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <img
               src="/promotions-screenshot-v2.webp"
               alt="Promotions Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             
             <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
@@ -1089,19 +1078,14 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — fills frame, top-cropped for natural phone feel -->
             
             <img
-              src="/staff-mock-v2.webp"
+              src="/staff-mock-v3.webp"
               alt="Stores, Staff &amp; Calendar"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — merges status bar edge into the dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — smooth transition into section background -->
             
             <!-- Brand gloss — teal diagonal sheen ties image to design system -->
@@ -1134,19 +1118,14 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap" style="overflow:visible;padding:32px 0;">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;height:460px;">
             <!-- Real screenshot — staff profile / schedule view -->
 
             <img
-              src="/calendar-mock-v2.webp"
+              src="/calendar-mock-v3.webp"
               alt="Staff Profile &amp; Schedule screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — status bar blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — transitions into section-deep background -->
             
             <!-- Brand gloss — teal diagonal sheen, ties to design system -->
@@ -1178,18 +1157,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — Services & Products management screen -->
             <img
               src="/services-mock.webp"
               alt="Services &amp; Products Screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — merges status bar edge into the dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — smooth transition into section background -->
             
             <!-- Brand gloss — teal diagonal sheen ties image to design system -->
@@ -1221,18 +1195,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — Branding & Notifications / compliance & language settings -->
             <img
               src="/language-mock.webp"
               alt="Email Footer Language &amp; Compliance settings"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — header blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — "Save Changes" CTA transitions into frame edge -->
             
             <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
@@ -1266,19 +1235,14 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — Share Promotion screen -->
             
             <img
-              src="/promotions-mock-v2.webp"
+              src="/promotions-mock-v3.webp"
               alt="Share this promotion screen"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — status bar blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — smooth exit into frame edge -->
             
             <!-- Brand gloss — teal diagonal sheen -->
@@ -1310,18 +1274,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — AI Business Insights screen -->
             <img
               src="/ai-advisor-mock-v2.webp"
               alt="AI Business Insights — Ask me anything"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — header / handle blends into frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — smooth exit into frame edge -->
             
             <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
@@ -1354,16 +1313,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             
             <img
-              src="/email-mock.webp"
+              src="/email-mock-v2.webp"
               alt="Drip Campaigns — Assign &amp; Manage"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             
             <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,184,166,0.05) 0%,transparent 55%);pointer-events:none;"></div>
           </div>
@@ -1393,18 +1349,13 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock phone-mock-angled" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — Branding & Notifications / Notifications tab -->
             <img
-              src="/booking-mock.webp"
+              src="/booking-mock-v2.webp"
               alt="Branding &amp; Notifications — Notifications settings"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — header blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — "Save Changes" CTA transitions into frame edge -->
             
             <!-- Brand gloss — teal diagonal sheen -->
@@ -1436,19 +1387,14 @@
       </div>
       <div class="reveal reveal-delay-2">
         <div class="phone-wrap">
-          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;padding:0;position:relative;">
+          <div class="phone-mock" style="overflow:hidden;background:#0a0f1a;position:relative;">
             <!-- Real screenshot — Stores, Staff & Calendar / Stores & Staff tab -->
             
             <img
               src="/multi-store-mock.webp"
               alt="Stores, Staff &amp; Calendar — Stores &amp; Staff view"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+              style="width:100%;height:100%;object-fit:contain;object-position:top center;display:block;"
             />
-            <!-- Top vignette — header blends into dark frame -->
-            <div style="position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(to bottom,rgba(10,15,26,0.45),transparent);pointer-events:none;"></div>
-            <!-- Side vignettes — depth & border integration -->
-            <div style="position:absolute;top:0;bottom:0;left:0;width:20px;background:linear-gradient(to right,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
-            <div style="position:absolute;top:0;bottom:0;right:0;width:20px;background:linear-gradient(to left,rgba(10,15,26,0.5),transparent);pointer-events:none;"></div>
             <!-- Bottom fade — smooth exit into frame edge -->
             
             <!-- Brand gloss — teal diagonal sheen, consistent with design system -->
